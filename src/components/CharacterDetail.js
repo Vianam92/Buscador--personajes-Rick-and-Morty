@@ -1,17 +1,20 @@
-const CharacterDetail = ({data}) =>{
-return (
+import { Link } from "react-router-dom";
+
+const CharacterDetail = ({ data }) => {
+  return (
     <section>
-        <h1>Detalle del Personaje</h1>
-          <img src={data.image} alt={data.name}/> 
-          <h2>{data.name}</h2>
-          <p>{data.species}</p>
-          <p>{data.status}</p>
-          <p>{data.episode.map(item=>{
-              return <p>{item.length}</p>
-          })}</p>
+        <Link to="/">Volver Atrás</Link>
+      <h1>Detalle del Personaje</h1>
+      <img src={data.image} alt={data.name} />
+      <ul>
+        <h2>{data.name}</h2>
+        <li>{data.species}</li>
+        <li>{data.planet}</li>
+        <li>{data.status}</li>
+        <li>{data.episode}</li>
+      </ul>
     </section>
- 
-)
+  );
 };
 
 export default CharacterDetail;

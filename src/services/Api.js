@@ -10,7 +10,8 @@ const getApi = () => {
             name:item.name,
             species:item.species,
             status:item.status,
-            episode:item.episode
+            episode:item.episode.length,
+            planet:item.origin.name
         };
       });
       return result;

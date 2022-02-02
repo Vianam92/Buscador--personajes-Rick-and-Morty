@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 
 const CharacterCard = ({ character }) => {
-  console.log(character)
   return (
     <>
       <img src={character.image} alt={character.name} title={character.name} />
