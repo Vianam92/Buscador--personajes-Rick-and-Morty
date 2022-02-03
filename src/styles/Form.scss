@@ -1,46 +1,82 @@
 @import "./App.scss";
 
-$colorFont:#44281d;
-$font-size:1.1rem;
+$colorFont: #44281d;
+$font-size: 1.1rem;
 
 @mixin formIinputS() {
-    border:none;
-    background-color: #7cdf2b0a;
-    height:30px;
-    border-bottom:3px solid #44281d;
-    margin-bottom: 10px;
-    font-size: $font-size;
-    color:$colorFont;
+  border: none;
+  background-color: #7cdf2b0a;
+  height: 30px;
+  border-bottom: 3px solid #44281d;
+  margin-bottom: 10px;
+  font-size: $font-size;
+  color: $colorFont;
+  width: 100%;
+  @media all and(min-width:768px) {
+    width: 400px;
+    font-size: 1.4rem;
+  }
 }
 
-.container{
-    &__form{
-    display:flex;
+.container {
+  &__form {
+    display: flex;
     flex-direction: column;
-    margin:5px;
-    padding:10px;
-    &--label{
-        color:$colorFont;
-        font-size: $font-size;
+    //align-items: center;
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    @media all and(min-width:768px) {
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    &--input{
+    &--label {
+      color: $colorFont;
+      font-size: $font-size;
+      width: 100%;
+      //margin-top: 50px;
+      @media all and(min-width:768px) {
+        width: 400px;
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: 50px;
+      }
+      @media all and(min-width:1200px) {
+        width: 100%;
+      }
+    }
+    &--input {
       @include formIinputS;
-      
     }
-    &--select{
-        @include formIinputS;
+    &--select {
+      @include formIinputS;
     }
-    &--estado{
-    color:$colorFont;
-    font-size: $font-size;
+    &--estado {
+      color: $colorFont;
+      font-size: $font-size;
+      width: 100%;
+      @media all and(min-width:768px) {
+        text-align: center;
+        padding: 10px;
+        margin-top: 30px;
+      }
     }
-    &--checked{
-        margin:5px;
+    &--status {
+      color: $colorFont;
+      font-size: $font-size;
+      @media all and(min-width:768px) {
+        margin: 5px;
+      }
     }
+    &--checked {
+      margin: 5px;
     }
-};
+  }
+}
 
-.options{
-    background-color: rgba(8, 180, 8, 0.767);
-    color:$colorFont;
+.options {
+  background-color: rgba(8, 180, 8, 0.767);
+  color: $colorFont;
 }

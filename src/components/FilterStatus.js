@@ -17,7 +17,8 @@ const FilterStatus = (props) => {
   return (
     <>
       <h3 className="container__form--estado">Estado:</h3>
-      <label htmlFor="All" className="container__form--label">Todos
+      <label htmlFor="All" className="container__form--status">Todos 
+      <i className="fas fa-boxes"></i></label>
       <input
       className="container__form--checked"
         type="radio"
@@ -26,8 +27,9 @@ const FilterStatus = (props) => {
         value="All"
         onChange={handleSearch}
         checked={props.searchStatus === "All"}
-      /></label>
-      <label htmlFor="unknown" className="container__form--label">Desconocido
+      />
+      <label htmlFor="unknown" className="container__form--status">Desconocido 
+      <i className="fa fa-question icon"></i></label>
       <input
       className="container__form--checked"
         type="radio"
@@ -36,9 +38,9 @@ const FilterStatus = (props) => {
         value="unknown"
         onChange={handleSearch}
         checked={props.searchStatus === "unknown"}
-      /></label>
+      />
 
-      <label htmlFor="Dead" className="container__form--label">Muerta
+      <label htmlFor="Dead" className="container__form--status">Muerta <i className="fas fa-skull-crossbones icon"></i></label>
       <input
       className="container__form--checked"
         type="radio"
@@ -47,8 +49,8 @@ const FilterStatus = (props) => {
         value="Dead"
         onChange={handleSearch}
         checked={props.searchStatus === "Dead"}
-      /></label>
-      <label htmlFor="Alive" className="container__form--label">Viva
+      />
+      <label htmlFor="Alive" className="container__form--status">Viva <i className="fas fa-heart icon"></i></label>
       <input
       className="container__form--checked"
         type="radio"
@@ -57,7 +59,7 @@ const FilterStatus = (props) => {
         value="Alive"
         onChange={handleSearch}
         checked={props.searchStatus === "Alive"}
-      /></label>
+      />
     </>
   );
 };

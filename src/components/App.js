@@ -57,9 +57,13 @@ function App() {
     const routeId = props.match.params.id;
     const foundCharacter = data.find((item) => parseInt(routeId) === item.id);
     if (foundCharacter) {
-      return <CharacterDetail data={foundCharacter} />;
+      return (
+        <CharacterDetail
+          data={foundCharacter}
+        />
+      );
     } else {
-      return <p>Personaje no encontrado</p>;
+      return <p className="notFound">Personaje no encontrado</p>;
     }
   };
 
@@ -76,7 +80,9 @@ function App() {
               searchSpecies={searchSpecies}
               searchStatus={searchStatus}
             />
-            <CharacterList data={filteredCharacter} />
+            <CharacterList
+              data={filteredCharacter}
+            />
           </Route>
           <Route path="/character-detail/:id" component={renderDetail}></Route>
         </Switch>

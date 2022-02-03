@@ -1,4 +1,4 @@
-import logo from "../images/rickandmorty.jpeg";
+import logo from "../images/klipartz.com.png";
 import "../styles/Header.scss";
 
 const Header = (props) => {
