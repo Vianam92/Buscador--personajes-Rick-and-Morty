@@ -1,15 +1,10 @@
-import Filters from "./Filters";
+import logo from "../images/rickandmorty.jpeg";
+import "../styles/Header.scss";
 
 const Header = (props) => {
   return (
     <header className="header">
-      <Filters
-        handleSearch={props.handleSearch}
-        data={props.data}
-        searchName={props.searchName}
-        searchSpecies={props.searchSpecies}
-        searchStatus={props.searchStatus}
-      />
+      <img src={logo} alt="logo rick and morty" className="header__img"/>
     </header>
   );
 };

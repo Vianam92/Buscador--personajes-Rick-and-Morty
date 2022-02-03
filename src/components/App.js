@@ -1,16 +1,18 @@
+import "../styles/Reset.scss";
 import "../styles/App.scss";
 import { useState, useEffect } from "react";
 import getApi from "../services/Api";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Header from "./Header";
+import Filters from "./Filters";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState("");
   const [searchSpecies, setSearchSpecies] = useState("All");
-  const [searchStatus, setSearchStatus] = useState("");
+  const [searchStatus, setSearchStatus] = useState("All");
 
   useEffect(() => {
     getApi().then((data) => {
@@ -39,17 +41,15 @@ function App() {
         : character.species === searchSpecies;
     })
     .filter((character) => {
-      return searchStatus !== ""
+      return searchStatus !== "All"
         ? character.status === searchStatus
         : character.status;
     })
     .sort((a, b) => {
       if (a.name > b.name) {
         return 1;
-      } else if (a.name < b.name) {
-        return -1;
       } else {
-        return 0;
+        return -1;
       }
     });
 
@@ -65,17 +65,22 @@ function App() {
 
   return (
     <>
-      <Switch>
-        <Route path="/" exact>
-          <Header handleSearch={handleSearch}
-            data={filteredCharacter}
-            searchName={searchName}
-            searchSpecies={searchSpecies}
-            searchStatus={searchStatus}/>
-          <CharacterList data={filteredCharacter} />
-        </Route>
-        <Route path="/character-detail/:id" component={renderDetail}></Route>
-      </Switch>
+      <Header />
+      <main className="container">
+        <Switch>
+          <Route path="/" exact>
+            <Filters
+              handleSearch={handleSearch}
+              data={filteredCharacter}
+              searchName={searchName}
+              searchSpecies={searchSpecies}
+              searchStatus={searchStatus}
+            />
+            <CharacterList data={filteredCharacter} />
+          </Route>
+          <Route path="/character-detail/:id" component={renderDetail}></Route>
+        </Switch>
+      </main>
     </>
   );
 }

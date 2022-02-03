@@ -1,3 +1,5 @@
+import "../styles/Form.scss";
+
 const FilterName = (props) => {
   const handleSearch = (eve) => {
     props.handleSearch({
@@ -7,8 +9,9 @@ const FilterName = (props) => {
   };
   return (
     <>
-      <label htmlFor="character">Busca por Personaje</label>
+      <label htmlFor="character" className="container__form--label">Busca por Personaje</label>
       <input
+      className="container__form--input"
         type={props.inputType}
         placeholder="Ej: Morty"
         name={props.name}

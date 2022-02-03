@@ -1,0 +1,46 @@
+@import "./App.scss";
+
+$colorFont:#44281d;
+$font-size:1.1rem;
+
+@mixin formIinputS() {
+    border:none;
+    background-color: #7cdf2b0a;
+    height:30px;
+    border-bottom:3px solid #44281d;
+    margin-bottom: 10px;
+    font-size: $font-size;
+    color:$colorFont;
+}
+
+.container{
+    &__form{
+    display:flex;
+    flex-direction: column;
+    margin:5px;
+    padding:10px;
+    &--label{
+        color:$colorFont;
+        font-size: $font-size;
+    }
+    &--input{
+      @include formIinputS;
+      
+    }
+    &--select{
+        @include formIinputS;
+    }
+    &--estado{
+    color:$colorFont;
+    font-size: $font-size;
+    }
+    &--checked{
+        margin:5px;
+    }
+    }
+};
+
+.options{
+    background-color: rgba(8, 180, 8, 0.767);
+    color:$colorFont;
+}
