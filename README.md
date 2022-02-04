@@ -1,6 +1,10 @@
 # Buscador de Personajes Rick and Morty
+
+<img src="./src/images/rick.jpg">
 Proyecto realizado como ejercicio extra para prácticar React.
 Consiste en obtener los datos de la Api, pintarlos, he filtrado por nombre, especies y status.
+
+## He utilizado en el proyecto todo lo aprendido en el módulo 3 de React.
 
  - Hooks (useState, useEffect)
  - LocalStorage
