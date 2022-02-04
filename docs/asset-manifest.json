@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.2f547503.css",
-    "main.js": "./static/js/main.a1db17ac.js",
+    "main.css": "./static/css/main.89fa60c5.css",
+    "main.js": "./static/js/main.e0106da1.js",
+    "static/media/klipartz.com.png": "./static/media/klipartz.com.b8e1ef32f250ffd48fdb.png",
     "index.html": "./index.html",
-    "main.2f547503.css.map": "./static/css/main.2f547503.css.map",
-    "main.a1db17ac.js.map": "./static/js/main.a1db17ac.js.map"
+    "main.89fa60c5.css.map": "./static/css/main.89fa60c5.css.map",
+    "main.e0106da1.js.map": "./static/js/main.e0106da1.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f547503.css",
-    "static/js/main.a1db17ac.js"
+    "static/css/main.89fa60c5.css",
+    "static/js/main.e0106da1.js"
   ]
 }
