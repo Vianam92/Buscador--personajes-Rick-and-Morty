@@ -70,9 +70,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="container">
-        <Switch>
-          <Route path="/" exact>
+      <main className="container"> 
             <Filters
               handleSearch={handleSearch}
               data={filteredCharacter}
@@ -83,7 +81,7 @@ function App() {
             <CharacterList
               data={filteredCharacter}
             />
-          </Route>
+          <Switch>
           <Route path="/character-detail/:id" component={renderDetail}></Route>
         </Switch>
       </main>

@@ -17,8 +17,8 @@ const FilterStatus = (props) => {
   return (
     <>
       <h3 className="container__form--estado">Estado:</h3>
-      <label htmlFor="All" className="container__form--status">Todos 
-      <i className="fas fa-boxes"></i></label>
+      <label htmlFor="All" className="container__form--status">
+        Todos <i className="fas fa-boxes"></i></label>
       <input
       className="container__form--checked"
         type="radio"
